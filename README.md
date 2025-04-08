@@ -1,16 +1,29 @@
-# vpn_app
+# VPN Test Application
 
-A new Flutter project.
+## Архитектура
+- State Management: Provider
+- Адаптивность: Sizer package
+- Локальное хранилище: SharedPreferences
+- Аналитика: Firebase Analytics
+- VPN Сервис: VPNService (mock implementation)
+- Структура: Feature-based
 
-## Getting Started
+## Решения
+1. Использован Provider как простой и эффективный state manager
+2. Добавлен VPNService для имитации подключения к VPN
+3. Добавлена анимация подключения через CircularProgressIndicator
+4. Реализована локальная история подключений с лимитом в 5 записей
+5. Использован StreamBuilder для real-time обновления таймера
+6. Обработка ошибок подключения с уведомлением пользователя
 
-This project is a starting point for a Flutter application.
+## Установка
+1. flutter pub get
+2. Настроить Firebase в проекте
+3. flutter run
 
-A few resources to get you started if this is your first Flutter project:
+## Примечания
+VPNService реализован как mock-сервис. Для реального подключения потребуется:
+1. Интеграция с нативными платформенными каналами
+2. Конфигурация реального VPN-сервера
+3. Обработка системных разрешений
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
